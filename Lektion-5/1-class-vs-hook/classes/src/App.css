@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.form-control {
+  width: 100%;
+  padding: .4em .6em;
+  margin-bottom: 1rem;
+  border-radius: .5em;
+  border: 1px solid #222;
+}
+
+.btn {
+  padding: .4em .8em;
+  border: 0;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border-radius: .5em;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product .form-control {
+  margin-top: 1rem;
+}

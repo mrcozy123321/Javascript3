@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.bg {
+  min-height: calc(100vh -53px);
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.btn {
+  padding: .5em 1em;
+  border-radius: .4em;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+}
+.btn-sm {
+  padding: .5em;
+}
+.btn-form {
+  background-color: darkslategrey;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+.navbar {
+  background-color: darkslategrey;
+}
+.navbar .container,
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  width: 40%;
+}
+.nav-links a {
+  display: inline-block;
+  padding: 1rem;
+}
+.nav-links a:hover {
+  color: #d1d1d1;
+}
+.active-link {
+  text-decoration: underline;
+}
+.posts,
+.create-post {
+  padding-top: 2rem;
+}
+.post {
+  box-shadow: 5px 5px 10px #4444447d;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+.post h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.input-group {
+  margin-bottom: 2rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  outline: none;
+}
+input.form-control {
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: .5rem 0;
+}
+input.form-control:focus {
+  border-bottom-color: #1100ff;
+}
+textarea.form-control {
+  padding: .5rem;
+  font-size: 1.2rem;
+  resize: none;
+  height: 300px;
+}
+textarea.form-control:focus {
+  border-color: #1100ff;
+}
+.input-label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}

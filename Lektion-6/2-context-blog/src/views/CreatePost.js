@@ -1,9 +1,13 @@
 import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { PostsContext } from '../contexts/PostsContext'
 import { ThemeContext } from '../contexts/ThemeContext'
+import actiontypes from '../reducers/actiontypes'
 
-const CreatePost = ({ addPost }) => {
-
+const CreatePost = () => {
+  
+  // const { addPost } = useContext(PostsContext)
+  const { dispatch } = useContext(PostsContext)
   const navigate = useNavigate()
   
   const [title, setTitle] = useState('')
@@ -11,12 +15,17 @@ const CreatePost = ({ addPost }) => {
 
   const onSub = e => {
     e.preventDefault()
-    addPost(title, body)
+    // addPost(title, body)
+    dispatch({
+      type: actiontypes().posts.addPost,
+      payload: { title, body }
+    })
     navigate("/")
   }
 
   const { isLightTheme, light, dark } = useContext(ThemeContext)
   const theme = isLightTheme ? light : dark
+
 
   return (
     <form className='create-post' onSubmit={onSub} style={{ color: theme.tet }}>

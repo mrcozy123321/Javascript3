@@ -1,16 +1,21 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { increment, decrement } from '../store/actions/quantityActions'
 
 const Quantity = () => {
 
-  // const counter = useSelector(state => state)
+  const dispatch = useDispatch()
+
+  const quantity = useSelector(state => state.quantity)
 
   return (
     <div>
       <h3>Quantity</h3>
-      <p>Quantity is = 0</p>
-      <button>+</button>
-      <button>-</button>
+      <p>Quantity is = { quantity }</p>
+      <button onClick={() => dispatch(increment(1))}>1</button>
+      <button onClick={() => dispatch(increment(10))}>10</button>
+      <button onClick={() => dispatch(decrement(1))}>-1</button>
+      <button onClick={() => dispatch(decrement(10))}>-10</button>
     </div>
   )
 }

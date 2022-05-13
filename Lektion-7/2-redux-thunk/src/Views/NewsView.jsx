@@ -1,16 +1,16 @@
-import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+// import { useEffect } from 'react'
+import {  useSelector } from 'react-redux'
 import Post from '../components/Post'
-import { getPosts } from '../store/actions/postsActions'
+// import { getPosts } from '../store/actions/postsActions'
 
 const NewsView = () => {
 
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   const { data, loading } = useSelector(state => state.posts)
 
-  useEffect(() => {
-    dispatch(getPosts())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(getPosts())
+  // }, [])
 
   return (
     <div>

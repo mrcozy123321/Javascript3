@@ -4,7 +4,8 @@ const actiontypes = () => {
     posts: {
       setPosts: 'SET_POSTS',
       loading: 'LOADING',
-      failure: 'POST_FAILURE'
+      failure: 'POST_FAILURE',
+      addNewPost: 'ADD_NEW_POST'
     },
     post: {
       loadPostStart: 'LOAD_POST_START',

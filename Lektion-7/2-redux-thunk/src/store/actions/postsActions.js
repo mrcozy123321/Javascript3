@@ -14,6 +14,26 @@ export const getPosts = () => {
   }
 }
 
+export const addPost = (post) => {
+  return async dispatch => {
+    dispatch(loading(true))
+      try {
+        const res = await axios.get('http://localhost:8080/posts', post)
+        dispatch(addToList(res.data))
+      }
+      catch (err) {
+        dispatch(postsFailure(err.message))
+      }
+    }
+  }
+
+const addToList = (post) => {
+  return {
+    type: actiontypes().posts.addNewPost,
+    payload: post
+  }
+}
+
 const loading = (payload) => {
   return {
     type: actiontypes().posts.loading,
